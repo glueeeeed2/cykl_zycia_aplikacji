@@ -35,20 +35,14 @@ public class MainActivity extends AppCompatActivity {
         decrementBtn = findViewById(R.id.decrementBtn);
         textViewPunkty = findViewById(R.id.pointsTextView);
 
-        incrementBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                points++;
-                textViewPunkty.setText(Integer.toString(points));
-            }
+        incrementBtn.setOnClickListener(view -> {
+            points++;
+            textViewPunkty.setText(Integer.toString(points));
         });
 
-        decrementBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                points--;
-                textViewPunkty.setText(Integer.toString(points));
-            }
+        decrementBtn.setOnClickListener(view -> {
+            points--;
+            textViewPunkty.setText(Integer.toString(points));
         });
 
     }
